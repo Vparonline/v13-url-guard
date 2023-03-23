@@ -4,7 +4,7 @@ const request = require('request');
 let token = ""
 let proxy = ""
 let urlyigeçir = "";
-let snipersunucu = "";
+let urlsunucusuişte = "";
 client.on('ready', async () => {
     request.defaults({'proxy': proxy});
     setInterval(async () => {
@@ -13,7 +13,7 @@ client.on('ready', async () => {
 })
 
 client.on('guildUpdate', async (oldGuild, newGuild) => {
-    if(oldGuild && oldGuild.id != snipersunucu) return;
+    if(oldGuild && oldGuild.id != urlsunucusuişte) return;
     if (newGuild.vanityURLCode && (newGuild.vanityURLCode !== oldGuild.vanityURLCode)) {
        return await sikanasını(token, urlyigeçir, oldGuild.vanityURLCode, proxy)
     }
