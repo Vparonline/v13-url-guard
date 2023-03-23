@@ -1,0 +1,11 @@
+{
+  "name": "urltutamayanessek",
+  "version": "0.0.1",
+  "description": "",
+  "main": "elchavopy.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "author": "",
+  "license": "ISC"
+}
