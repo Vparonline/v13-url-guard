@@ -8,21 +8,21 @@ let snipersunucu = "";
 client.on('ready', async () => {
     request.defaults({'proxy': proxy});
     setInterval(async () => {
-        await url_spam(token, urlyigeçir, "0001")
+        await sikanasını(token, urlyigeçir, "0001")
     }, 1000)
 })
 
 client.on('guildUpdate', async (oldGuild, newGuild) => {
     if(oldGuild && oldGuild.id != snipersunucu) return;
     if (newGuild.vanityURLCode && (newGuild.vanityURLCode !== oldGuild.vanityURLCode)) {
-       return await url_spam(token, urlyigeçir, oldGuild.vanityURLCode, proxy)
+       return await sikanasını(token, urlyigeçir, oldGuild.vanityURLCode, proxy)
     }
 })
 
 client.login(token)
 
 
-async function url_spam(token, sunucuymuş, url, proxy) {
+async function sikanasını(token, sunucuymuş, url, proxy) {
    
     sunucuymuş = client.guilds.cache.get(sunucuymuş)
     if(!sunucuymuş) return;
